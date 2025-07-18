@@ -271,7 +271,15 @@ document.getElementById("prodiv").style.display = 'flex';
 
     </head>
     
-    <body>
+   <body class="no-scroll">
+
+        <div id="preloader">
+  <div class="preloader-content">
+    <img class="preloader-log img-fluid" src="assets2/img/logo/logo.png" alt="Logo">
+    <span>Loading........</span>
+  </div>
+</div>
+
         
         <header class="header" >
             <div class="video-bg">
@@ -322,6 +330,8 @@ document.getElementById("prodiv").style.display = 'flex';
 
 
         
+
+
         <section class="slider-videos">
             <div class="container">
                 <div class="owl-carousel owl-theme swiper-vidoes">
@@ -445,7 +455,7 @@ document.getElementById("prodiv").style.display = 'flex';
 
 
 
-
+        
 
         
         <section class="content-images">
@@ -1669,29 +1679,33 @@ $(document).ready(function () {
     //         prevEl: ".swiper-btn-prev",
     //     },
     // })
-    $('.swiper-vidoes').owlCarousel({
-        loop:true,
-        margin: 12,
-        items: 2,
-        nav:true,
-        dots: false,
-        rtl: true,
-        responsive:{
-            0:{
-                items:2
-            },
-            600:{
-                items:2
-            },
-            1000:{
-                items:2
-            }
+   $('.swiper-vidoes').owlCarousel({
+    loop: true,
+    margin: 12,
+    items: 2,
+    nav: true,
+    dots: false,
+    rtl: true,
+    autoplay: true, // ✅ تشغيل التحريك التلقائي
+    autoplayTimeout: 3000, // ✅ كل 3 ثواني
+    autoplayHoverPause: true, // ✅ يوقف لما المستخدم يقف عليه بالماوس
+    responsive: {
+        0: {
+            items: 1
         },
-        navText: [
-            '<img src="assets2/img/icons/next.png" class="img-fluid" width="17" alt="">',
-            '<img src="assets2/img/icons/prev.png" class="img-fluid" width="17" alt="">'
-        ],
-  })
+        600: {
+            items: 2
+        },
+        1000: {
+            items: 3
+        }
+    },
+    navText: [
+        '<img src="assets2/img/icons/next.png" class="img-fluid" width="17" alt="">',
+        '<img src="assets2/img/icons/prev.png" class="img-fluid" width="17" alt="">'
+    ],
+});
+
     /*================== Slider Carsouel ===================*/
   
     /*================== Image Popup ===================*/
@@ -2014,8 +2028,20 @@ document.getElementById('qstcon').style.display = 'block';
         }
 
 
+ window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
 
+    setTimeout(() => {
+      preloader.classList.add("fade-out"); // لو عندك أنيميشن خروج
+      document.body.classList.remove("no-scroll"); // ✅ يرجع السكرول
+      setTimeout(() => {
+        preloader.style.display = "none";
+      }, 500); // استنى شوية بعد الأنيميشن
+    }, 800); // مثلا ثانية واحدة انتظار
+  });
         </script>
+
+
 
     </body>
 </html>

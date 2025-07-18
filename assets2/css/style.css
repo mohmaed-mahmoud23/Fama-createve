@@ -1314,6 +1314,84 @@ header .title-header h1 {
   border-bottom: 0;
 }
 
+
+
+
+
+
+
+/* شكل اللودر */
+/* الخلفية السودة */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* محتوى اللودر */
+.preloader-content {
+  text-align: center;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+/* تكبير الصورة بشكل مناسب للشاشة */
+.preloader-log {
+  width: 300px;
+  max-width: 90vw;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px auto;
+  animation: fade 1.5s ease-in-out infinite alternate;
+}
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* الصورة */
+.preloader-content img {
+
+  height: auto;
+  margin-bottom: 20px;
+  animation: fade 1.5s ease-in-out infinite alternate;
+}
+
+/* الكتابة */
+.preloader-content span {
+  font-size: 20px;
+  letter-spacing: 2px;
+  animation: blink 1s infinite;
+}
+
+/* أنيميشن للصورة */
+@keyframes fade {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
+}
+
+/* أنيميشن لكتابة Loading */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+
+
+
+
+/*  */
+
+
+
+
+
 .footer {
 
 
