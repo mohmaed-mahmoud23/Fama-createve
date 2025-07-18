@@ -180,6 +180,7 @@ header .title-header h1 {
 }
 .about .order-now {
   margin-bottom: 36px;
+  margin-top: 36px;
   text-align: center;
 }
 .about .order-now .btn-order {
@@ -206,6 +207,7 @@ header .title-header h1 {
   height: 32px;
   font-size: 12px;
   border-radius: 50%;
+  
 }
 .about .order-now .btn-order span {
   font-family: "All Genders Regular";
