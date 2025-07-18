@@ -1315,10 +1315,16 @@ header .title-header h1 {
 }
 
 .footer {
-  background-image: url(../img/bg/2.jpg);
+
+
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(0, 183, 255, 0.3), transparent 60%),
+    linear-gradient(to bottom, #0a0a0a, #111111 40%, #1c1c1c 60%, #0a0a0a);
+
+  background-blend-mode: screen;
+  background-repeat: no-repeat;
   background-repeat: repeat;
-  padding: 36px 0 45px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 48px 0;
 }
 .footer .footer-content-top {
   margin-bottom: 36px;

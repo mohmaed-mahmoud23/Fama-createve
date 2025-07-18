@@ -4,7 +4,17 @@
     padding: 70px 0 30px;
     position: relative;
     overflow: hidden;
+     direction:ltr;
+  text-align: right;
+  
 }
+.footer .row {
+  display: flex;
+
+justify-content: space-between;
+  gap: 2rem; /* مسافة أفقية ورأسية بين الأعمدة */
+}
+
 
 .footer::before {
     content: '';
@@ -163,4 +173,29 @@
     .footer-section {
         margin-bottom: 40px;
     }
+}
+@media (max-width: 768px) {
+  .footer .row {
+    flex-direction: column;
+    align-items: center; /* يخلي المحتوى فـ النص */
+    text-align: center;
+  }
+
+  .footer-section {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .footer h5::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-newsletter input {
+    padding-right: 60px;
+  }
+
+  .newsletter-btn {
+    right: 10px;
+  }
 }
