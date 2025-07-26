@@ -302,37 +302,31 @@ document.getElementById("prodiv").style.display = 'flex';
       <img src="assets2/img/logo/logo.png" alt="Logo" width="160" height="55" class="d-inline-block align-text-top">
     </a>
 
-    <!-- زر التوجّل للهاتف -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-      aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <!-- الزر مكان أيقونة البار -->
+    <a class="navbar-brand text-white fw-bold fs-5 ms-auto m"
+      href="./ss.html"
+      style="
+        text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+        border: 2px solid #fff;
+        padding: 6px 12px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(3px);
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        transition: all 0.4s ease-in-out;
+      "
+      onmouseover="this.style.backgroundColor='rgba(0,123,255,0.2)';
+                   this.style.boxShadow='0 0 20px rgba(0,123,255,0.7)';
+                   this.style.borderColor='#0d6efd';"
+      onmouseout="this.style.backgroundColor='rgba(255,255,255,0.1)';
+                  this.style.boxShadow='0 0 10px rgba(0,0,0,0.3)';
+                  this.style.borderColor='#fff';">
+      الفروع على الخريطة
+    </a>
 
-    <!-- اللينكات -->
-    <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
-      <a class="navbar-brand text-white fw-bold fs-5"
-        href="./ss.html"
-        style="
-          text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-          border: 2px solid #fff;
-          padding: 6px 12px;
-          border-radius: 10px;
-          background-color: rgba(255, 255, 255, 0.1);
-          backdrop-filter: blur(3px);
-          box-shadow: 0 0 10px rgba(0,0,0,0.3);
-          transition: all 0.4s ease-in-out;
-        "
-        onmouseover="this.style.backgroundColor='rgba(0,123,255,0.2)';
-                     this.style.boxShadow='0 0 20px rgba(0,123,255,0.7)';
-                     this.style.borderColor='#0d6efd';"
-        onmouseout="this.style.backgroundColor='rgba(255,255,255,0.1)';
-                    this.style.boxShadow='0 0 10px rgba(0,0,0,0.3)';
-                    this.style.borderColor='#fff';">
-        الفروع على الخريطة
-      </a>
-    </div>
   </div>
 </nav>
+
 
 
 
